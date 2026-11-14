@@ -131,4 +131,16 @@ git checkout -b report
 
 # История операций
 git log --all --pretty=format:"%h | %ad | %an | %s" --date=short
+
+# Добавление файлов отчета и фиксация изменений
+git add README.md screenshots/
+git commit -m "Добавление отчета"
+
+# Слияние отчета в основную ветку
+git checkout master
+git merge report
+
+# Отправка изменений в удаленный репозиторий
+git push origin master
+git push -u origin report
 ```
